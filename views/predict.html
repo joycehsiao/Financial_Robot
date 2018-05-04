@@ -7,6 +7,15 @@
   <meta name="author" content="">
   <link rel="Shortcut Icon"type="image/x-icon" href="favicon.ico">
 
+  <!-- chart start-->
+  <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+        <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/series-label.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+  <!-- chart end -->
+
   <title>Financial Robot | NTUSTIM</title>
 
 
@@ -14,6 +23,7 @@
   <link href="stylesheets/ie10-viewport-bug-workaround.css" rel="stylesheet">
   <script src="javascripts/ie-emulation-modes-warning.js.下載"></script>
   <script src="javascripts/predictDegree.js"></script>
+  
   <link href="stylesheets/carousel.css" rel="stylesheet">
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
  
@@ -106,17 +116,9 @@
         <a name="story" id="story">
         <div class="col-md-7">
           <h2 class="featurette-heading">過去預測配置與5050配置比較折線圖<br><span class="text-muted">選時間</span></h2>
-          <p class="lead">應該可以用PowerBI做動態折線圖</p>
-          <font face = "微軟正黑體" size="3" >
-            <p3 class="lead">QQQ</p3>
-
         </div>
-        <div class="row featurette">
-          <img class="featurette-image img-responsive center-block"  alt="500x500" src="images/21.png" data-holder-rendered="true">
+        <div id="container"style="max-width:800px;height:400px">
       
-        </div>
-        <div class="row featurette">
-          <img class="featurette-image img-responsive center-block"  alt="500x500" src="images/22.png" data-holder-rendered="true">
         </div>
       </div>
 
@@ -137,6 +139,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascripts/chart.js"></script>
     <script src="javascripts/jquery.min.js.下載"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="javascripts/bootstrap.min.js.下載"></script>
@@ -145,4 +148,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="javascripts/ie10-viewport-bug-workaround.js.下載"></script>
   
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg></body></html>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500
+
+</text></svg></body></html>
