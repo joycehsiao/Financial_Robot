@@ -6,6 +6,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var predictRouter = require('./routes/predict');
 var aboutRouter = require('./routes/about');
+var suggestionRouter = require('./routes/suggestion');
+var chartRouter = require('./routes/chart');
 var app = express();
 
 app.set('view engine', 'html');
@@ -16,11 +18,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/index', indexRouter);
 app.use('/predict',predictRouter);
 app.use('/about',aboutRouter);
-
-
-
+app.use('/suggestion',suggestionRouter);
+app.use('/chart',chartRouter);
 console.log("hi");
 module.exports = app;
 
