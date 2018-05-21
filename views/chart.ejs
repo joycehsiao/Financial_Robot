@@ -14,8 +14,43 @@
         <script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
         <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
         <script src="https://img.hcharts.cn/highcharts/themes/dark-unica.js"></script>
+        
     <title>Financial Robot | NTUSTMI</title>
-
+    <script>
+     
+      var i1 = "<%= index1 %>";
+      var i2 = "<%= index2 %>";
+      var i3 = "<%= index3 %>";
+      var i4 = "<%= index4 %>";
+      var i5 = "<%= index5 %>";
+      var c = "<%= cycle %>";
+      index1=i1.split(",");
+      index2=i2.split(",");
+      index3=i3.split(",");
+      index4=i4.split(",");
+      index5=i5.split(",");
+      cycle=c.split(",");
+      console.log(index1);
+      for(var i=0;i<index1.length;i++){
+        index1[i]=parseFloat(index1[i]);
+      }
+      for(var i=0;i<index2.length;i++){
+        index2[i]=parseFloat(index2[i]);
+      }
+      for(var i=0;i<index3.length;i++){
+        index3[i]=parseFloat(index3[i]);
+      }
+      for(var i=0;i<index4.length;i++){
+        index4[i]=parseFloat(index4[i]);
+      }
+      for(var i=0;i<index5.length;i++){
+        index5[i]=parseFloat(index5[i]);
+      }
+      for(var i=0;i<cycle.length;i++){
+        cycle[i]=parseFloat(cycle[i]);
+      }
+      
+    </script>
     
     <link href="/stylesheets/chart.css" rel="stylesheet">
   </head>
@@ -33,8 +68,15 @@
        <div class="left_block">
          <p>If you put <p class="left_text">10</p> dollars </p><br>
          <p>into the market on</p>
-          <input class="date"type="date" name="bday">
-          <br><br><br><br>
+
+          
+          <form  name="dateForm"  >
+            <input class="date" type="month" name="userDay" id="userDay" min="2000-01" max="2017-11" value="2001-01">
+            <br>
+            <input class="btn" type="button" onclick="get_action()" value="check">
+          </form>
+
+          <br><br>
           <p>Your invest income <br>would be like ....</p>
         
        </div>
@@ -45,8 +87,8 @@
       </div>
         <div class="contenter footer_area">
             <div class="footer_school">
-              <p class="footer_title">NTUST</p>
-              <p class="footer_text">106台北市大安區基隆路四段43號</p>
+              <p class="footer_title">NTUST</p><br>
+              <p class="footer_text">No.43, Keelung Rd., Sec.4, Da'an Dist., Taipei City 10607, Taiwan</p>
             </div>
             <div class="footer_contact">
               <p class="footer_title">CONTACT</p>
@@ -79,5 +121,7 @@
 
      
 </body>
-    <script src="javascripts/chart.js"></script>
+<script src="javascripts/chart.js">
+  setData(index1,index2,index3,index4,index5,cycle);
+</script>
 </html>

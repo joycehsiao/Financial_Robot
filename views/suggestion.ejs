@@ -10,8 +10,29 @@
 
     <title>Financial Robot | NTUSTIM</title>
 
-    <script src="javascripts/predictDegree.js"></script>
+    <!-- <script src="/javascripts/predictDegree.js"></script> -->
     <link href="/stylesheets/suggestion.css" rel="stylesheet">
+    <script>
+      var test = "<%= test %>";
+      var degree="<%= degree %>";
+      console.log(test);
+      console.log(degree);
+      function setType(type){
+        if(type==1){
+        var typeString="冒險";
+        document.getElementById("aggressive").style.color="#FFD43A";
+        document.getElementById("conservative").style.color="white";
+        document.getElementById("box1").innerHTML=(degree); 
+        }
+        if(type==2){
+          var typeString="保守";
+          document.getElementById("aggressive").style.color="white";
+          document.getElementById("conservative").style.color="#FFD43A";
+          document.getElementById("box1").innerHTML=("30%");
+        }
+      }
+      
+    </script>
   </head>
 
   <body>
@@ -34,7 +55,7 @@
            <p class="left_title"id="conservative"onclick="setType(2)">CONSERVATIVE</p>
          </div>
          
-         <p class="left_text">Your inventment preference</p>
+         <p class="left_text">Your investment preference</p>
          <hr>
        </div>
        
@@ -44,7 +65,7 @@
            <p class="title">Current Market State</p>
            <hr>
            <div class="state_text_block">
-             <p class="state" id="state">成長期</p>
+             <p class="state" id="state"><%= test %></p>
              <p class="text">說明</p>
            </div>
          </div>
@@ -54,7 +75,7 @@
            <div class="s_block">
              <div class="box1">
                <p class="box_title">stock</p>
-               <p class="box_num" id="box1">50%</p>
+               <p class="box_num" id="box1"><%= degree %></p>
              </div>
              <div class="box2">
                <p class="box_title">stock</p>
@@ -76,7 +97,7 @@
      <div class="contenter footer_area">
         <div class="footer_school">
           <p class="footer_title">NTUST</p>
-          <p class="footer_text">106台北市大安區基隆路四段43號</p>
+          <p class="footer_text">No.43, Keelung Rd., Sec.4, Da'an Dist., Taipei City 10607, Taiwan</p>
         </div>
         <div class="footer_contact">
           <p class="footer_title">CONTACT</p>
