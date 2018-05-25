@@ -11,15 +11,16 @@ db.once('open', function callback () {
 
 var dataSchema = new mongoose.Schema({
     Date: String,
-    VAR18:Number,
+    VAR06:Number,
     VAR11:Number,
     VAR12:Number,
+    VAR13:Number,
     VAR14:Number,
     VAR16:Number,
-    VAR13:Number,
-    VAR06:Number,
-    VAR60:Number,
     VAR17:Number,
+    VAR18:Number,
+    VAR57:Number,
+    VAR60:Number,
     Cycle:Number
 }, {collection: 'data'});
 

@@ -12,7 +12,8 @@ router.get('/', function(req, res, next) {
 
 var degree=1;
 
-predict.findOne({'Date':'2000-10-31'},'Cycle',function(err,data){
+predict.findOne({'Index':'1'},'current',function(err,data){
+  
   if(err){
     console.error(err);
   }

@@ -189,11 +189,13 @@ a:visited{
   position: absolute;
   margin-top: 10px;
   margin-bottom: 0;
+  width: 150px;
   font-size: 30px;
 }
 
 .concept_content {
   position: absolute;
+
   margin-top: 30px;
   padding-top: 0;
   width: 500px;

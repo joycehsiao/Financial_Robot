@@ -9,10 +9,9 @@ db.once('open', function callback () {
 });
 
 var predictSchema = new mongoose.Schema({
-    x: Number,
-    Date: String,
+    Index: Number,
     Cycle:Number 
-}, {collection: 'cycle'});
+}, {collection: 'current'});
 
 
 

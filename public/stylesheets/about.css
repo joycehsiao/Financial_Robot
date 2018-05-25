@@ -123,6 +123,7 @@ a:visited{
   font-family: 微軟正黑體;
   margin: 5px;
   padding: 0;
+  padding-top: 5px;
   left: 20%;
 }
 
@@ -269,7 +270,7 @@ a:visited{
 }
 
 .instr_text {
-  font-size: 35px;
+  font-size: 30px;
   letter-spacing: 1px;
   color: white;
   font-family: 微軟正黑體;
@@ -278,7 +279,7 @@ a:visited{
   width: 30%;
   height: 50%;
   display: inline-block;
-  top: 20%;
+  top: 5%;
   margin-left: 10px;
 }
 

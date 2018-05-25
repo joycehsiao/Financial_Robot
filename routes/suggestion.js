@@ -2,23 +2,25 @@ var express = require('express');
 var router = express.Router();
 mongoose = require('mongoose');
 predict = require('../model/predictModel.js');
-
+var d;
+var state;
 router.get('/', function(req, res, next) {
-  predict.findOne({'Date':'2000-10-31'},'Cycle',function(err,data){
+  predict.findOne({'Index':1},'Cycle',function(err,data){
     if(err){
       res.end(err.toJSON);
     }
     else{
-      degree=data.Cycle;
-      console.log('%d',degree);
-      if(degree==1){state='成長期1';}
-      else if(degree==2){state='成長期2';}
-      else if(degree==3){state='成長期3';}
-      else if(degree==4){state='成長期4';}
+      d=data.Cycle;
+      console.log('%d',d);
+      if(d==1){state='谷底期';}
+      else if(d==2){state='成長期';}
+      else if(d==3){state='高峰期';}
+      else if(d==4){state='走緩期';}
+      console.log('%s',state);
     }
   });
   res.render('suggestion.ejs',{
-    degree: degree,
+    degree: d,
     test: state
   });
 });

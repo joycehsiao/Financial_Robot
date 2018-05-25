@@ -60,10 +60,25 @@ a:visited{
     cursor: pointer;
 }
 .suggest_block{
-  margin:15px;
-  height:600px;
+  padding:0 27%;
+  height:400px;
+  text-align: center;
+  
 }
-
+.dateForm{
+  width: 400px;
+  padding-left: 10px;
+  display: inline-block;
+}
+.text{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  margin-top:0; 
+  left: 0;
+  display: inline-block;
+}
 .left_block {
   font-family: 微軟正黑體;
   position: absolute;
@@ -91,6 +106,7 @@ a:visited{
   padding:0;
 }
 .date{
+  display: inline-block;
   width:80%;
   height:35px;
   background-color:#ECEEF2;
@@ -98,10 +114,9 @@ a:visited{
   text-align:center;
 }
 .btn{
-  margin-left:30%;
-  margin-right:30%;
-  width:70px;
-  height:35px;
+ 
+  width:50px;
+  height:25px;
   background-color:#ECEEF2;
   text-align:center;
   border:#ECEEF2;
@@ -124,7 +139,7 @@ a:visited{
     font-weight: 800;
     max-width:95%;
     margin-top:3%;
-    height: 90%;
+    width:50%;
     background-color: #272D38;
 }
 .footer_area {
