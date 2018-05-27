@@ -22,13 +22,60 @@
         var typeString="冒險";
         document.getElementById("aggressive").style.color="#FFD43A";
         document.getElementById("conservative").style.color="white";
-        document.getElementById("box1").innerHTML=(degree); 
+        if(degree==2){
+          document.getElementById("box1").innerHTML=("30%"); 
+          document.getElementById("box2").innerHTML=("60%"); 
+          document.getElementById("box3").innerHTML=("10%"); 
+          document.getElementById("box4").innerHTML=("0%");
+        }
+        if(degree==1){
+          document.getElementById("box1").innerHTML=("25%"); 
+          document.getElementById("box2").innerHTML=("60%"); 
+          document.getElementById("box3").innerHTML=("10%"); 
+          document.getElementById("box4").innerHTML=("5%");
+        }
+        if(degree==3){
+          document.getElementById("box1").innerHTML=("20%"); 
+          document.getElementById("box2").innerHTML=("70%"); 
+          document.getElementById("box3").innerHTML=("5%"); 
+          document.getElementById("box4").innerHTML=("5%");
+        }
+        if(degree==4){
+          document.getElementById("box1").innerHTML=("0%"); 
+          document.getElementById("box2").innerHTML=("20%"); 
+          document.getElementById("box3").innerHTML=("0%"); 
+          document.getElementById("box4").innerHTML=("80%");
+        }
+         
         }
         if(type==2){
           var typeString="保守";
           document.getElementById("aggressive").style.color="white";
           document.getElementById("conservative").style.color="#FFD43A";
-          document.getElementById("box1").innerHTML=("30%");
+          if(degree==2){
+          document.getElementById("box1").innerHTML=("60%"); 
+          document.getElementById("box2").innerHTML=("25%"); 
+          document.getElementById("box3").innerHTML=("5%"); 
+          document.getElementById("box4").innerHTML=("10%");
+          }
+          if(degree==1){
+            document.getElementById("box1").innerHTML=("10%"); 
+            document.getElementById("box2").innerHTML=("15%"); 
+            document.getElementById("box3").innerHTML=("5%"); 
+            document.getElementById("box4").innerHTML=("70%");
+          }
+          if(degree==3){
+            document.getElementById("box1").innerHTML=("30%"); 
+            document.getElementById("box2").innerHTML=("20%"); 
+            document.getElementById("box3").innerHTML=("10%"); 
+            document.getElementById("box4").innerHTML=("40%");
+          }
+          if(degree==4){
+            document.getElementById("box1").innerHTML=("0%"); 
+            document.getElementById("box2").innerHTML=("20%"); 
+            document.getElementById("box3").innerHTML=("5%"); 
+            document.getElementById("box4").innerHTML=("75%");
+          }
         }
       }
       
@@ -75,19 +122,19 @@
            <div class="s_block">
              <div class="box1">
                <p class="box_title">股票型基金</p>
-               <p class="box_num" id="box1"><%= degree %></p>
+               <p class="box_num" id="box1">-</p>
              </div>
              <div class="box2">
                <p class="box_title">新興市場債基金</p>
-               <p class="box_num"id="box2">50%</p>
+               <p class="box_num"id="box2">-</p>
              </div>
              <div class="box3 ">
                <p class="box_title">高收益債基金</p>
-               <p class="box_num"id="box3">50%</p>
+               <p class="box_num"id="box3">-</p>
              </div>
              <div class="box4" >
                <p class="box_title">投資等級債基金</p>
-               <p class="box_num"id="box4">50%</p>
+               <p class="box_num"id="box4">-</p>
              </div>
            
             </div>

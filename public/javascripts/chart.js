@@ -165,23 +165,23 @@ function draw(num){
     imagefifty =drawfifty(num);
     imagepcon =drawcon(num);
 
-    var r ={name:'US',data:[]}
+    var r ={name:'積極',data:[]}
     for(var i =0;i<index1.length;i++){
             r.data[i]=[Date.UTC(2001,i+num,1),imagepredict[i]]
     }
 
-    var f ={name:'FIFTY',data:[]}
+    var f ={name:'股市型投資型各半',data:[]}
     for(var i =0;i<index1.length;i++){
             f.data[i]=[Date.UTC(2001,i+num,1),imagefifty[i]]
     }
 
-    var p ={name:'CONSERVATIVE',data:[]}
+    var p ={name:'保守',data:[]}
     for(var i =0;i<index1.length;i++){
             p.data[i]=[Date.UTC(2001,i+num,1),imagecon[i]]
     }
     var chart = Highcharts.chart('container', {
         title: {
-                text: 'INVESTMENT LINE CHART'
+                text: '投資報酬折線圖'
         },
         xAxis:{
                 type:"datetime",
@@ -193,7 +193,7 @@ function draw(num){
         },
         yAxis: {
                 title: {
-                        text: 'PAYOFF'
+                        text: '報酬'
                 }
         },
         legend: {
